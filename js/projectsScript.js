@@ -12,7 +12,7 @@ const projects = [
     {
         image: './assets/BlahBlahBanner.png',
         title: 'Blah Blah Interactive Type Specimen',
-        link: './workspagev2.html',
+        link: './blahblah.html',
         orderValue: 0,
         shadow: '0 0 10px rgba(82, 250, 82, 0.5)'       // green glow
     },

@@ -409,6 +409,18 @@ header .ProjectNav ul li a {
     }
 }
 
+@keyframes shadowBob {
+  0% {
+    filter: drop-shadow(0 0 0vmax rgba(0, 255, 0, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 12vmax rgb(255, 255, 255));
+  }
+  100% {
+    filter: drop-shadow(0 0 0vmax rgba(0, 255, 0, 0.25));
+  }
+}
+
 #ProjectTitleText,
 #ProjectImage {
     opacity: 1;
@@ -482,20 +494,67 @@ header .ProjectNav ul li a {
     align-items: flex-start;
     margin: 0;
     padding: 0;
+
+    overflow: hidden;
 }
 
 #HeroBlah img {
+    position: relative;
+    z-index: 1;
     margin-top: 10%;
     height: 40%;
     width: auto;
 }
 
+#HeroBlah img:nth-of-type(2) {
+    position: absolute;
+    z-index: 0;
+    right: 16vmax;
+    bottom:28vmax;
+    rotate: 6deg;
+
+    opacity: 0.4;
+
+    width: 15vmax;
+    height: auto;
+
+
+}
+
+#HeroBlah img:nth-of-type(3) {
+    position: absolute;
+    z-index: 0;
+    right: 18vmax;
+    top:4vmax;
+
+
+    opacity: 0.4;
+
+    width: 10vmax;
+    height: auto;
+
+}
+
+#HeroBlah img:nth-of-type(4) {
+    position: absolute;
+    z-index: 0;
+    left: 16vmax;
+    top:10vmax;
+
+
+    opacity: 0.4;
+
+    width: 15vmax;
+    height: auto;
+
+}
+
 #panel {
     position: relative;
     z-index: 1;
-    height: 100vmax;
+    height: fit-content;
     margin-top: -24vmax;
-    padding: 0.6vmax 4vmax 0 4vmax;
+    padding: 0.6vmax 4vmax 10vmax 4vmax;
 
     border-radius: 1vmax;
 
@@ -587,7 +646,7 @@ header .ProjectNav ul li a {
 
 #Images {
     background-color: #000000;
-    height: 40vmax;
+    height: 30vmax;
     width: auto;
 
     border-color: #A72C2C;
@@ -627,4 +686,24 @@ header .ProjectNav ul li a {
 
     font-size: 1.1vmax;
     font-weight: 400;
+}
+
+#ProgressBanner {
+    background-color: #000000;
+    height: 30vmax;
+    width: auto;
+
+    border-color: #A72C2C;
+    border-width: 0.3vmax;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#ProgressBanner img {
+    width: 20vmax;
+    padding: 4vmax 0 4vmax 0;
 }
