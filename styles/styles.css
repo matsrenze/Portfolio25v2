@@ -1,0 +1,630 @@
+@font-face {
+    font-family: 'BlahBlah Solid';
+    src: url('../assets/fonts/BlahBlah-Solid.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+:root {
+    --font-family: 'Orbit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --text-color: #BF3333;
+}
+
+/* ======================== Base Layout ======================== */
+html {
+    height: 100vh;
+}
+
+.whiteback {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+    background-size: contain;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.redback {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-image: url('../assets/ProjectsBack.png');
+    background-repeat: repeat;
+    background-size: contain;
+    margin: 0;
+    overflow-x: scroll;
+}
+
+/* ======================== Navigation ======================== */
+.ProjectNav {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+header .ProjectNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+header .ProjectNav ul li a {
+    color: #FAFDF6;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1vmax;
+
+}
+
+.whiteback header .ProjectNav ul li a {
+    color: #FAFDF6;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1vmax;
+
+}
+
+.whiteback header .ProjectNav {
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.whiteback header .ProjectNav ul li a {
+    color: var(--font-family);
+}
+
+
+#navlogo {
+    width: 4.5vmax;
+    height: auto;
+    display: block;
+
+    filter: drop-shadow(0 0 10px rgba(214, 222, 214, 0.3));
+}
+
+/* ======================== Hero ======================== */
+
+#indexMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#face-anim {
+    height: 50vmax;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vmax;
+}
+
+#logosvg {
+    margin-top: -10vmax;
+}
+
+#MainNav {
+    width: 100%;
+
+}
+
+#MainNav ul {
+    list-style-type: none;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#MainNav ul li a {
+    color: var(--text-color);
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.1vmax;
+}
+
+#MainNav ul li:nth-of-type(2) a {
+    margin-right: 3vmax;
+}
+
+
+/* ======================== Hero Animation ======================== */
+
+.Starpopup {
+    transform-origin: center center;
+    animation:
+        SterAnim 2s ease-in-out;
+}
+
+.StarpopupRight {
+    transform-origin: center center;
+    animation:
+        SterAnimRight 2s ease-in-out;
+}
+
+/* #logosvg path[fill="url(#f)"] {
+    animation: Hoofd 0.1s  alternate infinite;
+    transform-origin: center center;
+} */
+
+.hoofdAnim {
+    animation: Hoofd 1s alternate infinite;
+    transform-origin: center center;
+}
+
+@keyframes SterAnim {
+    0% {
+        translate: 0 0;
+    }
+
+    55% {
+        translate: 0 -29%;
+        rotate: -8deg;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes SterAnimRight {
+    0% {
+        translate: 0 0;
+    }
+
+    55% {
+        translate: 0 -26%;
+        rotate: 6deg;
+
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes Hoofd {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+/* ======================== Footer ======================== */
+
+#ContactFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    transform: translateY(120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+    z-index: 3;
+}
+
+#ContactFooter.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#ContactFooter svg {
+    position: absolute;
+    left: 49%;
+    bottom: 0;
+}
+
+#ContactFooter path {
+    fill: #A72C2C;
+}
+
+#ContactFooter svg path:nth-of-type(2) {
+    animation: bob 1.2s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+.redback #ContactFooter a {
+    color: #FAFDF6;
+}
+
+.redback #ContactFooter path {
+    fill: #FAFDF6;
+}
+
+@keyframes bob {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-0.15vmax);
+        rotate: -8deg;
+    }
+
+    /* adjust height as needed */
+}
+
+#ContactFooter a {
+    font-family: 'BlahBlah Solid', var(--font-family);
+    color: var(--text-color);
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.6vmax;
+    line-height: 1.3;
+}
+
+
+
+/* ======================== Projects Overview ======================== */
+#ProjectsMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    width: auto
+}
+
+#ContentContainer {
+    display: grid;
+    grid-template-columns: 0.29fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 0vmax;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 6vmax;
+}
+
+#ContentContainer ul {
+    list-style-type: none;
+}
+
+#ProjectItem {
+    background-color: #000000;
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vmax;
+    height: 35vmax;
+
+    border-style: solid;
+    border-width: 0.25vmax;
+    border-color: #FAFDF6;
+
+    overflow: hidden;
+    position: relative;
+}
+
+/* #ProjectItem.IdleAnimationBG {
+    animation: rotateBG 4s infinite alternate ease-in-out;
+} */
+
+#ProjectItemLink {
+    text-decoration: none;
+    display: contents;
+}
+
+#ProjectImage {
+    z-index: 1;
+    width: 70%;
+    height: auto;
+    will-change: filter, transform;
+
+    filter: drop-shadow(var(--shadow, 0 0 0 transparent));
+    transition: filter 0.3s ease;
+    /* optional: smooth change */
+}
+
+#AccentItem {
+    position: absolute;
+    z-index: 0;
+    width: 40%;
+    height: auto;
+    bottom: -2vmax;
+    left: -2vmax;
+    rotate: 2deg;
+}
+
+#ProjectOrder {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: flex-start;
+}
+
+#ProjectOrder svg {
+    width: 3.2vmax;
+    height: auto;
+    display: block;
+    margin-top: 1.5vmax;
+}
+
+#ProjectTitle {
+    grid-column: 1 / -1;
+    grid-row: 2 / 2;
+}
+
+.ProjectTitleText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    text-align: center;
+}
+
+#ProjectTitle p {
+    color: #FAFDF6;
+    font-size: 1.8vmax;
+    width: 40%;
+
+}
+
+
+/* ======================== Project Animations ======================== */
+@keyframes rotateBG {
+    from {
+        transform: rotate(-3deg);
+    }
+
+    to {
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes rotateImage {
+    from {
+        transform: rotate(2deg);
+    }
+
+    to {
+        transform: rotate(-2deg);
+    }
+}
+
+#ProjectTitleText,
+#ProjectImage {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* .Idle {
+    animation: rotateImage 4s infinite alternate ease-in-out;
+} */
+
+.fade-out {
+    opacity: 0;
+    animation: fadeOut 1.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+
+    }
+
+    30% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.Projectstar svg path {
+    stroke: #FAFDF6;
+    stroke-width: 0px;
+    transition: stroke 0.3s ease, stroke-width 0.3s ease;
+}
+
+.Projectstar svg path.active {
+    stroke: #A72C2C;
+    stroke-width: 3px;
+    transition: stroke 0.8s ease;
+}
+
+.Projectstar svg path:hover {
+    fill: rgba(247, 159, 159, 0.485);
+    transition: fill 0.4s ease;
+}
+
+/* ======================== Project Detail Layout ======================== */
+
+
+#Detail {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin: 0;
+}
+
+#HeroBlah {
+    background-color: #000000;
+    height: 70vmax;
+    width: 100vmax;
+
+    position: sticky;
+    z-index: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+#HeroBlah img {
+    margin-top: 10%;
+    height: 40%;
+    width: auto;
+}
+
+#panel {
+    position: relative;
+    z-index: 1;
+    height: 100vmax;
+    margin-top: -24vmax;
+    padding: 0.6vmax 4vmax 0 4vmax;
+
+    border-radius: 1vmax;
+
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8vmax;
+
+}
+
+/* ======================== Project Intro ======================== */
+
+#IntroHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#IntroHead h1 {
+    font-size: 1.6vmax;
+    font-weight: 400;
+    width: 22vmax;
+}
+
+#IntroHead #button {
+    background-image: url('../assets/PortfolioButton.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 3vmax;
+    width: 12vmax;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-style: var(--font-family);
+    color: #FAFDF6;
+    font-weight: 400;
+    font-size: 1.1vmax;
+}
+
+#Intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#Intro h2 {
+    font-size: 1.6vmax;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+#Intro .overview {
+    display: flex;
+    flex-direction: column;
+    width: 45vmax;
+
+    font-size: 1.1vmax;
+    font-weight: 400;
+
+}
+
+#Intro .overview h3 {
+    font-weight: 400;
+    font-size: 1.1vmax;
+    text-decoration: underline;
+}
+
+#Intro .overview ul {
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2vmax;
+
+    width: 28vmax;
+    font-size: 1vmax;
+}
+
+/* ======================== Project Image Container ======================== */
+
+#Images {
+    background-color: #000000;
+    height: 40vmax;
+    width: auto;
+
+    border-color: #A72C2C;
+    border-width: 0.3vmax;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#Images img {
+    width: 25vmax;
+    padding: 4vmax 0 4vmax 0;
+}
+
+/* ======================== Progress Content ======================== */
+
+#Progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#Progress h4 {
+    font-weight: 400;
+    font-size: 1.1vmax;
+    text-decoration: underline;
+}
+
+#ProgressBody {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+
+    font-size: 1.1vmax;
+    font-weight: 400;
+}
