@@ -115,6 +115,10 @@ header .ProjectNav ul li a {
     margin-top: -10vmax;
 }
 
+#logosvg svg {
+    overflow:hidden;
+}
+
 #MainNav {
     width: 100%;
 
@@ -480,7 +484,7 @@ header .ProjectNav ul li a {
     margin: 0;
 }
 
-#HeroBlah {
+.HeroBlah {
     background-color: #000000;
     height: 70vmax;
     width: 100vmax;
@@ -498,7 +502,7 @@ header .ProjectNav ul li a {
     overflow: hidden;
 }
 
-#HeroBlah img {
+.HeroBlah img {
     position: relative;
     z-index: 1;
     margin-top: 10%;
@@ -506,7 +510,7 @@ header .ProjectNav ul li a {
     width: auto;
 }
 
-#HeroBlah img:nth-of-type(2) {
+.HeroBlah img:nth-of-type(2) {
     position: absolute;
     z-index: 0;
     right: 16vmax;
@@ -521,7 +525,7 @@ header .ProjectNav ul li a {
 
 }
 
-#HeroBlah img:nth-of-type(3) {
+.HeroBlah img:nth-of-type(3) {
     position: absolute;
     z-index: 0;
     right: 18vmax;
@@ -535,7 +539,7 @@ header .ProjectNav ul li a {
 
 }
 
-#HeroBlah img:nth-of-type(4) {
+.HeroBlah img:nth-of-type(4) {
     position: absolute;
     z-index: 0;
     left: 16vmax;
@@ -548,6 +552,163 @@ header .ProjectNav ul li a {
     height: auto;
 
 }
+
+.HeroNecro {
+    background-color: #000000;
+    height: 70vmax;
+    width: 100vmax;
+
+    position: sticky;
+    z-index: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.HeroNecro img {
+    position: relative;
+    z-index: 1;
+    margin-top: 10%;
+    height: 40%;
+    width: auto;
+}
+
+.HeroNecro img:nth-of-type(2) {
+    position: absolute;
+    z-index: 0;
+    right: 9vmax;
+    bottom:28vmax;
+    rotate: 6deg;
+
+    opacity: 0.4;
+
+    width: 15vmax;
+    height: auto;
+
+}
+
+.HeroNecro img:nth-of-type(3) {
+    position: absolute;
+    z-index: 0;
+    left: 10vmax;
+    top:4vmax;
+    rotate: 12deg;
+    opacity: 0.4;
+
+    width: 10vmax;
+    height: auto;
+
+}
+
+.HeroNecro img:nth-of-type(4) {
+    position: absolute;
+    z-index: 0;
+    left: -14vmax;
+    bottom: 15vmax;
+
+    scale: 0.4;
+
+    opacity: 0.5;
+
+}
+
+.HeroRecord {
+    background-color: #000000;
+    height: 70vmax;
+    width: 100vmax;
+
+    position: sticky;
+    z-index: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.HeroRecord img {
+    position: relative;
+    z-index: 1;
+    margin-top: 10%;
+    height: 40%;
+    width: auto;
+}
+
+.HeroRecord img:nth-of-type(2) {
+    position: absolute;
+    z-index: 0;
+    left: -6vmax;
+    bottom: 15vmax;
+
+    scale: 1.4;
+    opacity: 0.8;
+
+    filter: drop-shadow(0 0 2vmax rgba(255, 255, 255, 0.25));
+
+}
+
+.HeroTD {
+    background-color: #000000;
+    height: 70vmax;
+    width: 100vmax;
+
+    position: sticky;
+    z-index: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.HeroTD img {
+    position: relative;
+    z-index: 1;
+    margin-top: 10%;
+    height: 40%;
+    width: auto;
+}
+
+.HeroTD img:nth-of-type(2) {
+    position: absolute;
+    z-index: 0;
+    right: 9vmax;
+    bottom:28vmax;
+
+
+    opacity: 0.6;
+
+    width: 12vmax;
+    height: auto;
+
+}
+
+.HeroTD img:nth-of-type(3) {
+    position: absolute;
+    z-index: 0;
+    left: 2vmax;
+    top: -5vmax;
+
+    width: 10vmax;
+    opacity: 0.8;
+
+}
+
+
 
 #panel {
     position: relative;
@@ -580,7 +741,7 @@ header .ProjectNav ul li a {
 #IntroHead h1 {
     font-size: 1.6vmax;
     font-weight: 400;
-    width: 22vmax;
+    width: 25vmax;
 }
 
 #IntroHead #button {
@@ -646,7 +807,7 @@ header .ProjectNav ul li a {
 
 #Images {
     background-color: #000000;
-    height: 30vmax;
+    height: fit-content;
     width: auto;
 
     border-color: #A72C2C;
@@ -655,13 +816,25 @@ header .ProjectNav ul li a {
 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+
+    gap: 2vmax;
 
 }
 
-#Images img {
+#Images .IMG {
     width: 25vmax;
+    padding: 4vmax 0 4vmax 0;
+}
+
+#Images .IMG2 {
+    width: 20vmax;
+    padding: 4vmax 0 4vmax 0;
+}
+
+#Images .GIF {
+    width: 40vmax;
     padding: 4vmax 0 4vmax 0;
 }
 
@@ -699,11 +872,21 @@ header .ProjectNav ul li a {
 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 2vmax;
 }
 
 #ProgressBanner img {
     width: 20vmax;
+    padding: 4vmax 0 4vmax 0;
+}
+
+#ProgressBanner #DT {
+    width: 40vmax;
+    padding: 4vmax 0 4vmax 0;
+}
+#ProgressBanner #DT2 {
+    width: 40vmax;
     padding: 4vmax 0 4vmax 0;
 }
