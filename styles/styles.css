@@ -116,7 +116,7 @@ header .ProjectNav ul li a {
 }
 
 #logosvg svg {
-    overflow:hidden;
+    overflow: hidden;
 }
 
 #MainNav {
@@ -414,15 +414,17 @@ header .ProjectNav ul li a {
 }
 
 @keyframes shadowBob {
-  0% {
-    filter: drop-shadow(0 0 0vmax rgba(0, 255, 0, 0.25));
-  }
-  50% {
-    filter: drop-shadow(0 0 12vmax rgb(255, 255, 255));
-  }
-  100% {
-    filter: drop-shadow(0 0 0vmax rgba(0, 255, 0, 0.25));
-  }
+    0% {
+        filter: drop-shadow(0 0 0vmax rgba(0, 255, 0, 0.25));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 12vmax rgb(255, 255, 255));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0vmax rgba(0, 255, 0, 0.25));
+    }
 }
 
 #ProjectTitleText,
@@ -514,7 +516,7 @@ header .ProjectNav ul li a {
     position: absolute;
     z-index: 0;
     right: 16vmax;
-    bottom:28vmax;
+    bottom: 28vmax;
     rotate: 6deg;
 
     opacity: 0.4;
@@ -529,7 +531,7 @@ header .ProjectNav ul li a {
     position: absolute;
     z-index: 0;
     right: 18vmax;
-    top:4vmax;
+    top: 4vmax;
 
 
     opacity: 0.4;
@@ -543,7 +545,7 @@ header .ProjectNav ul li a {
     position: absolute;
     z-index: 0;
     left: 16vmax;
-    top:10vmax;
+    top: 10vmax;
 
 
     opacity: 0.4;
@@ -583,7 +585,7 @@ header .ProjectNav ul li a {
     position: absolute;
     z-index: 0;
     right: 9vmax;
-    bottom:28vmax;
+    bottom: 28vmax;
     rotate: 6deg;
 
     opacity: 0.4;
@@ -597,7 +599,7 @@ header .ProjectNav ul li a {
     position: absolute;
     z-index: 0;
     left: 10vmax;
-    top:4vmax;
+    top: 4vmax;
     rotate: 12deg;
     opacity: 0.4;
 
@@ -675,7 +677,7 @@ header .ProjectNav ul li a {
     overflow: hidden;
 }
 
-.HeroTD img {
+.HeroTD video {
     position: relative;
     z-index: 1;
     margin-top: 10%;
@@ -683,11 +685,11 @@ header .ProjectNav ul li a {
     width: auto;
 }
 
-.HeroTD img:nth-of-type(2) {
+.HeroTD img:first-of-type {
     position: absolute;
     z-index: 0;
     right: 9vmax;
-    bottom:28vmax;
+    bottom: 28vmax;
 
 
     opacity: 0.6;
@@ -697,11 +699,11 @@ header .ProjectNav ul li a {
 
 }
 
-.HeroTD img:nth-of-type(3) {
+.HeroTD img:nth-of-type(2) {
     position: absolute;
     z-index: 0;
     left: 2vmax;
-    top: -5vmax;
+    top: 5vmax;
 
     width: 10vmax;
     opacity: 0.8;
@@ -886,6 +888,7 @@ header .ProjectNav ul li a {
     width: 40vmax;
     padding: 4vmax 0 4vmax 0;
 }
+
 #ProgressBanner #DT2 {
     width: 40vmax;
     padding: 4vmax 0 4vmax 0;
