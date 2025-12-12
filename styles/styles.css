@@ -710,6 +710,60 @@ header .ProjectNav ul li a {
 
 }
 
+.HeroConsuminder {
+    background-color: #000000;
+    height: 70vmax;
+    width: 100vmax;
+
+    position: sticky;
+    z-index: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+    gap:1vmax;
+
+}
+
+.HeroConsuminder img:nth-of-type(-n+4) {
+    position: relative;
+    z-index: 1;
+    margin-top: 10%;
+    height: 45%;
+    width: auto;
+}
+
+.HeroConsuminder svg:first-of-type {
+    position: absolute;
+    z-index: 0;
+    right: 0vmax;
+    top: 4vmax;
+
+
+    opacity: 0.8;
+
+    width: 6vmax;
+    height: auto;
+}
+
+.HeroConsuminder svg:nth-of-type(2) {
+    position: absolute;
+    z-index: 0;
+    left: 0vmax;
+    bottom: 10vmax;
+    border-radius: 2%;
+
+    opacity: 0.6;
+
+    width: 8vmax;
+    height: auto;
+}
+
 
 
 #panel {
@@ -730,6 +784,8 @@ header .ProjectNav ul li a {
     gap: 8vmax;
 
 }
+
+
 
 /* ======================== Project Intro ======================== */
 
@@ -840,6 +896,29 @@ header .ProjectNav ul li a {
     padding: 4vmax 0 4vmax 0;
 }
 
+
+#Imagesconsu {
+    background-color: #000000;
+    height: fit-content;
+    width: auto;
+
+    border-color: #A72C2C;
+    border-width: 0.3vmax;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2vmax;
+}
+
+#Imagesconsu img {
+    height: 30vmax;
+    padding: 4vmax 0 4vmax 0;
+}
+
 /* ======================== Progress Content ======================== */
 
 #Progress {
@@ -892,4 +971,32 @@ header .ProjectNav ul li a {
 #ProgressBanner #DT2 {
     width: 40vmax;
     padding: 4vmax 0 4vmax 0;
+}
+
+
+#ProgressBanner #consu {
+    width: 90%;
+    padding: 4vmax 0 4vmax 0;
+}
+
+
+#insights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#insights h5 {
+    font-weight: 400;
+    font-size: 1.1vmax;
+    text-decoration: underline;
+}
+
+#insightsBody {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+
+    font-size: 1.1vmax;
+    font-weight: 400;
 }
