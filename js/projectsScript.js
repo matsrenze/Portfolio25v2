@@ -43,7 +43,7 @@ const projects = [
         title: 'Consuminder – A digital solution to mitigate foodwaste',
         link: './consuminder.html',
         orderValue: 4,
-        shadow: '0 0 10px rgba(248, 246, 131, 0)'       // orange glow
+        shadow: '0 0 10px rgba(248, 246, 131, 0)'    // no glow
     },
 ];
 
