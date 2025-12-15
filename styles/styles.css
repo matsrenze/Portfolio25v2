@@ -733,8 +733,8 @@ header .ProjectNav ul li a {
 .HeroConsuminder img:nth-of-type(-n+4) {
     position: relative;
     z-index: 1;
-    margin-top: 10%;
-    height: 45%;
+    margin-top: 8%;
+    height: 50%;
     width: auto;
 }
 
@@ -745,22 +745,22 @@ header .ProjectNav ul li a {
     top: 4vmax;
 
 
-    opacity: 0.8;
+    opacity: 0.9;
 
-    width: 6vmax;
+    width: 9vmax;
     height: auto;
 }
 
 .HeroConsuminder svg:nth-of-type(2) {
     position: absolute;
     z-index: 0;
-    left: 0vmax;
+    left: 4vmax;
     bottom: 10vmax;
     border-radius: 2%;
 
     opacity: 0.6;
 
-    width: 8vmax;
+    width: 12vmax;
     height: auto;
 }
 
