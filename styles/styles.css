@@ -528,7 +528,7 @@ header .ProjectNav ul li a {
 }
 
 .HeroBlah {
-    background-image: url('../assets/dcsHero.png');
+    background-image: url('../assets/dcsHero.svg');
     background-repeat: no-repeat;
     background-size: contain;
     height: 70vmax;
