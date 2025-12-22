@@ -10,9 +10,9 @@
 
 const projects = [
     {
-        image: './assets/BlahBlahBanner.png',
-        title: 'Blah Blah Interactive Type Specimen',
-        link: './blahblah.html',
+        image: './assets/DCSimg1.png',
+        title: 'Digital Summer Clean-Up ’25 — HvA',
+        link: './dsc.html',
         orderValue: 0,
         shadow: '0 0 10px rgba(82, 250, 82, 0.5)'       // green glow
     },
@@ -95,7 +95,7 @@ const toggleIdleAnimations = (state) => {
 let isAnimating = false;
 let pendingIndex = null;
 
-async function waitForTransition(el, type = 'animationend', fallback = 1500) {
+async function waitForTransition(el, type = 'animationend', fallback = 1200) {
     return new Promise((resolve) => {
         let done = false;
         const handler = () => {

@@ -334,7 +334,7 @@ header .ProjectNav ul li a {
 
 #ProjectImage {
     z-index: 1;
-    width: 80%;
+    width: 90%;
     height: auto;
     will-change: filter, transform;
 
@@ -528,7 +528,9 @@ header .ProjectNav ul li a {
 }
 
 .HeroBlah {
-    background-color: #000000;
+    background-image: url('../assets/dcsHero.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 70vmax;
     width: 100vmax;
 
