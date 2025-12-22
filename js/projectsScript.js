@@ -143,26 +143,29 @@ async function updateProject(index, options = {}) {
     isAnimating = true;
     isLoaded = false;
 
-    // Fade out both elements
-    ProjectImage.classList.add('fade-out');
-    ProjectTitle.classList.add('fade-out');
+    const titleElements = [ProjectTitle].filter(Boolean);
+    const imageElements = [ProjectImage].filter(Boolean);
+
+    // Fade/slide out elements and pause bounce animation while transitioning
+    titleElements.forEach(el => el.classList.add('title-transition'));
+    imageElements.forEach(el => el.classList.add('fade-out'));
 
     setTimeout(applyProjectData, 300);
     updateStarStates();
 
     await Promise.all([
-        waitForTransition(ProjectImage),
-        waitForTransition(ProjectTitle)
+        ...titleElements.map(el => waitForTransition(el)),
+        ...imageElements.map(el => waitForTransition(el))
     ]);
 
     // Remove old state, trigger fade-in keyframes
-    ProjectImage.classList.remove('fade-out');
-    ProjectTitle.classList.remove('fade-out');
+    titleElements.forEach(el => el.classList.remove('title-transition'));
+    imageElements.forEach(el => el.classList.remove('fade-out'));
 
     // Wait for fade-in animation to complete
     await Promise.all([
-        waitForTransition(ProjectImage, 'animationend'),
-        waitForTransition(ProjectTitle, 'animationend')
+        ...titleElements.map(el => waitForTransition(el, 'animationend')),
+        ...imageElements.map(el => waitForTransition(el, 'animationend'))
     ]);
 
     // Unlock and process queued request if any

@@ -29,7 +29,7 @@ html {
 .redback {
     font-family: var(--font-family);
     color: var(--text-color);
-    background-image: url('../assets/ProjectsBack.png');
+    background-image: url('../assets/redback.png');
     background-repeat: repeat;
     background-size: contain;
     margin: 0;
@@ -301,7 +301,7 @@ header .ProjectNav ul li a {
     align-items: center;
     justify-content: center;
 
-    margin-top: 6vmax;
+    margin-top: 0vmax;
 }
 
 #ContentContainer ul {
@@ -309,7 +309,6 @@ header .ProjectNav ul li a {
 }
 
 #ProjectItem {
-    background-color: #000000;
     grid-column: 2 / 2;
     grid-row: 1 / 2;
     display: flex;
@@ -318,42 +317,30 @@ header .ProjectNav ul li a {
     width: 55vmax;
     height: 35vmax;
 
-    border-style: solid;
-    border-width: 0.25vmax;
-    border-color: #FAFDF6;
-
     overflow: hidden;
     position: relative;
+
 }
 
-/* #ProjectItem.IdleAnimationBG {
+#ProjectItem.IdleAnimationBG {
     animation: rotateBG 4s infinite alternate ease-in-out;
-} */
+}
 
 #ProjectItemLink {
     text-decoration: none;
     display: contents;
+
 }
 
 #ProjectImage {
     z-index: 1;
-    width: 70%;
+    width: 80%;
     height: auto;
     will-change: filter, transform;
 
     filter: drop-shadow(var(--shadow, 0 0 0 transparent));
-    transition: filter 0.3s ease;
-    /* optional: smooth change */
-}
 
-#AccentItem {
-    position: absolute;
-    z-index: 0;
-    width: 40%;
-    height: auto;
-    bottom: -2vmax;
-    left: -2vmax;
-    rotate: 2deg;
+    /* optional: smooth change */
 }
 
 #ProjectOrder {
@@ -361,6 +348,8 @@ header .ProjectNav ul li a {
     grid-row: 1 / 2;
     align-self: center;
     justify-self: flex-start;
+
+    margin-bottom: 15%;
 }
 
 #ProjectOrder svg {
@@ -376,19 +365,32 @@ header .ProjectNav ul li a {
 }
 
 .ProjectTitleText {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
     text-align: center;
+
+    height: fit-content;
+    font-family: 'BlahBlah Solid', var(--font-family);
+
+    margin-left: 3vmax;
 }
 
 #ProjectTitle p {
+    position: absolute;
     color: #FAFDF6;
-    font-size: 1.8vmax;
-    width: 40%;
+    font-size: 6vmax;
+    max-width: 60%;
+    min-width: 80%;
+    transform: scaleY(1.5);
+    animation: bounceUp 2s ease-in-out infinite;
 
+}
+
+.title-transition {
+    animation: titleSlideSwap 1.2s ease-in-out;
 }
 
 
@@ -427,15 +429,54 @@ header .ProjectNav ul li a {
     }
 }
 
+@keyframes titleSlideSwap {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1.5);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateY(120%) scaleY(1.5);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateY(-120%) scaleY(1.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1.5);
+    }
+}
+
+
+
+@keyframes bounceUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    45% {
+        transform: translateY(-1vmax);
+    }
+
+    /* up by 1vmax */
+    100% {
+        transform: translateY(0);
+    }
+}
+
 #ProjectTitleText,
 #ProjectImage {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* .Idle {
+.Idle {
     animation: rotateImage 4s infinite alternate ease-in-out;
-} */
+}
 
 .fade-out {
     opacity: 0;
@@ -726,7 +767,7 @@ header .ProjectNav ul li a {
     padding: 0;
 
     overflow: hidden;
-    gap:1vmax;
+    gap: 1vmax;
 
 }
 
